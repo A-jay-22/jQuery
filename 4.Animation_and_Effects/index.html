@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation and effects</title>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <p id="fade-in">(fade In) Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error vero labore repudiandae nobis quia ipsum deserunt, exercitationem beatae cum, deleniti vitae. Soluta mollitia qui ipsum incidunt, dolore fuga fugiat. </p>
+    <hr>
+    <p id="fade-out">(fade Out) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p>
+    <hr>
+    <p id="fade-toggle">(fade Toggle) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p>
+    <hr>
+    <p id="fade-to">(fade To) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p>
+    <hr>
+    <p id="slide-down">(slide Down) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p>
+    <hr>
+    <p id="slide-up">(slide Up) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p>
+    <hr>
+    <p id="slide-toggle">(slide Toggle) Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla nemo commodi? Cupiditate distinctio maiores nulla ut dolore tempora libero sed ad error veniam. A alias numquam quis repudiandae consectetur!</p> 
+    
+</body>
+<script>
+    $(document).ready(function(){
+        // Effects
+        $("#fade-in").click(function(){
+            $(this).fadeIn();
+        })
+        $("#fade-out").click(function(){
+            $(this).fadeOut(function(){
+                
+            });
+        })
+        $("#fade-toggle").click(function(){
+            $(this).fadeToggle();
+        })
+        $("#fade-to").click(function(){
+            $(this).fadeTo("slow", 0.5);
+        })
+        $("#slide-down").click(function(){
+            $(this).slideDown();
+        })
+        $("#slide-up").click(function(){
+            $(this).slideUp();
+        })
+        $("#slide-toggle").click(function(){
+            $(this).slideToggle();
+    })
+    
+    // Animate
+    $('p').click(function(){
+        $(this).animate({
+            left: '250px',
+            height: 'auto',
+            width: '150px'
+        });
+    });
+});
+
+</script>
+</html>
